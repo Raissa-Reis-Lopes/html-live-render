@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5 -Questão 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <div  id="box1" class="box box1">
+            <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+        </div>
+        <div class="box box2">
+            <div id="box2" class="inner-content"></div>
+        </div>
+    </div>
+    <script>
+        const textArea = document.getElementById("textArea");
+        const box2 = document.getElementById("box2");
+
+        textArea.addEventListener("input",renderHTML);
+
+        function renderHTML(){
+            const content = textArea.value;
+            
+            box2.innerHTML = content;
+            
+        }
+
+    </script>
+</body>
+</html>
